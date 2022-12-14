@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Enter New Customer</h1>
+
+	<form action="#" th:action="@{./addNewCustomer}" th:object="${customer}" method="post">
+	
+		Enter First Name : <input type="text" th:field="*{customerFirstName}"><br><br>
+		Enter Surname Name : <input type="text" th:field="*{customerSurname}"><br><br>
+		Enter Email : <input type="text" th:field="*{customerEmail}"><br><br>
+		Enter Date of Birth : <input type="date" name="dob"><br><br>
+		
+		<input type="submit" value="Add">
+		
+		<h2 th:text="${message}"></h2>
+	</form>
+
+</body>
+</html>
